@@ -1,11 +1,11 @@
 class Solution {
     public boolean hasDuplicate(int[] nums) {
-        Set<Integer> seen = new HashSet<>();
+        HashSet<Integer> set = new HashSet<>();
+
         for(int num : nums){
-            if(seen.contains(num)){
-            return true;
+            if(!set.add(num)){
+                return true;
             }
-            seen.add(num);
         }
         return false;
     }

@@ -3,20 +3,11 @@ class Solution {
         if(s.length() != t.length()){
             return false;
         }
-
-        char[] sArray = s.toCharArray();
-        char[] tArray = t.toCharArray();
-
-        Arrays.sort(sArray);
-        Arrays.sort(tArray);
-
-        if(sArray==tArray){
-            return true;
-        }
-        return Arrays.equals(sArray, tArray);
+        char[] sSort = s.toCharArray();
+        char[] tSort = t.toCharArray();
+        Arrays.sort(sSort);
+        Arrays.sort(tSort);
+        return Arrays.equals(sSort, tSort);
+        
     }
 }
-
-
-
-
